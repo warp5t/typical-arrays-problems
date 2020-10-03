@@ -1,37 +1,30 @@
+exports.min = function min (array) {
+  if ( typeof array.length !== 0 || array !==[] || array ==='object') {
 
-function avg () {
-let check = arr.length;
-  if (check !== 0) {
+    return (Math.min.apply(null, array));
+  }
+  else {return 0} ;
+}
+
+exports.max = function max (array) {
+  if (typeof array.length !== 0 || array !==[] || array ==='object') {
+
+    return (Math.max.apply(null, array));
+  }
+  else  {return 0} ;
+}
+
+exports.avg = function avg (array) {
+  if (typeof array.length !== 0 || array !==[] || array ==='object') {
     let result = 0;
     let sum = 0;
-    for (let numberIn of arr) {
+    for (let numberIn of array) {
       sum = sum + numberIn;
-      result = sum / arr.length;
+      result = sum / array.length;
       result = result.toFixed(2);
     }
-    console.log(result);
+
     return result;
   }
-  else return 0;
+  else {return 0} ;
 }
-
-
-function max () {
-  if (arr.length !==0) {
-    console.log(Math.max.apply(null, arr));
-    return (Math.max.apply(null, arr));
-  }
-  else return 0;
-}
-
-function min () {
-  if (arr.length !==0) {
-    console.log (Math.min.apply(null, arr));
-    return (Math.min.apply(null, arr));
-  }
-  else return 0;
-}
-
-avg();
-max();
-min();
